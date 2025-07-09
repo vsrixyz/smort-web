@@ -22,9 +22,40 @@ Create a new [Reveal.js](https://github.com/hakimel/reveal.js) presentation from
 
 1. Push completed slides back to GitHub
 
-1. Configure your GitHub pages settings to serve the slides from _youraccount_.github.io/_repositoryname_ (or custom domain even)
+1. Deploy to GitHub Pages (see [GitHub Pages Deployment](#github-pages-deployment) below for detailed steps)
 
 1. **Amaze your friends** by being able to share the URL of your live, interactive slides with your audience immediately. No more emailing PowerPoint attachments for YOU!
+
+## GitHub Pages Deployment
+
+To deploy your presentation to GitHub Pages:
+
+1. **Push your changes** to the main/master branch of your GitHub repository
+
+2. **Enable GitHub Pages:**
+   - Go to your repository on GitHub
+   - Click on **Settings** tab
+   - Scroll down to **Pages** section in the left sidebar
+   - Under **Source**, select **Deploy from a branch**
+   - Choose **main** (or **master**) branch
+   - Select **/ (root)** as the folder
+   - Click **Save**
+
+3. **Wait for deployment:**
+   - GitHub will build and deploy your site (usually takes 1-2 minutes)
+   - You'll see a green checkmark and URL when ready
+   - Your presentation will be available at: `https://yourusername.github.io/repository-name`
+
+4. **Important notes:**
+   - Make sure your repository is public (or you have GitHub Pro for private repos)
+   - The `index.html` file should be in the root directory (which it is by default)
+   - Changes may take a few minutes to appear on the live site
+   - You can use a custom domain by adding a `CNAME` file if desired
+
+**Troubleshooting:**
+- If slides don't load, check that the submodule was properly initialized with `git submodule update --init --recursive`
+- Ensure all file paths in `index.html` are relative (not absolute)
+- Check the **Actions** tab in GitHub to see if the deployment succeeded
 
 ## Updating Reveal.js
 
